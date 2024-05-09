@@ -1,0 +1,287 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "SpaceGrotesk";
+    src: url(./SpaceGrotesk-Medium.ttf);
+    font-weight: 500;
+}
+
+body {
+    font-family: "SpaceGrotesk";
+    font-weight: 500;
+}
+
+.bg {
+    float: left;
+    width: 30%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: url(./images/bg-main-desktop.png);
+
+}
+
+.card-info {
+    float: left;
+    width: 70%;
+    height: 100vh;
+    clear: right;
+}
+.grid-property{
+    display: grid;
+    grid-template-columns: 360px;
+    grid-template-rows: repeat(3, 80px);
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+    padding-left: 200px;
+
+}
+
+
+.details-box {
+    margin-bottom: 0px;
+    padding-left: 5px;
+}
+
+.name {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 25px;
+    gap: 1px;
+}
+
+.cardholder {
+    grid-column: 1/3;
+
+}
+
+.cardholder p {
+    margin-top: 5px;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.det-input {
+    grid-column: 1/3;
+}
+
+.name-txt {
+    border-radius: 8px;
+    border: 1px solid rgba(160, 160, 160, 0.753);
+    height: 40px;
+    width: 350px;
+    padding-left: 10px;
+    font-size: 15px;
+    outline-color: hsla(278, 100%, 50%, 0.699);
+    
+}
+.details-box:nth-child(3) {
+    display: grid;
+    grid-template-columns: 100px 60px 170px;
+    gap: 5px;
+    text-transform: uppercase;
+
+}
+
+.exp{
+    grid-column: span 2;
+    margin-top: 10px;
+    height: fit-content;
+    width: fit-content;
+    font-size: 15px;
+}
+
+.cvc-txt {
+    margin-top: 10px;
+    grid-column: 3/4;
+    grid-row: 1;
+    height: fit-content;
+    width: fit-content;
+    font-size: 15px;
+    margin-left: 7px;
+}
+
+.month-year {
+    /* border: 1px solid; */
+    grid-column: span 2;
+}
+
+.date {
+    width: 70px;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid rgb(145, 143, 143);
+    padding-left: 8px;
+    outline-color: hsla(278, 100%, 50%, 0.699);
+}
+
+.date:nth-child(1) {
+    margin-right: 5px;
+}
+
+#cvc {
+    margin-left: 7px;
+    grid-column: 3/4;
+    width: 170px;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid rgb(145, 143, 143);
+    padding-left: 8px;
+    outline-color: hsla(278, 100%, 50%, 0.699);
+
+}
+
+.card-front {
+    background: url(./images/bg-card-front.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 360px;
+    height: 220px;
+    position: absolute;
+    top: 120px;
+    left: 170px;
+}
+
+.card-back {
+    background: url(./images/bg-card-back.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 360px;
+    height: 220px;
+    position: absolute;
+    top: 350px;
+    left: 220px;
+}
+
+.card-logo {
+    height: 40px;
+    width: 70px;
+    margin: 20px 0px 0px 22px;
+}
+
+#card-num {
+    font-size: 27px;
+    color: #fff;
+    position: relative;
+    top: 40px;
+    left: 20px;
+    margin-left: 4px;
+}
+
+#holder {
+    font-size: 14px;
+    color: #fff;
+    position: relative;
+    top: 60px;
+    left: 20px;
+    text-transform: uppercase;
+    margin-left: 4px;
+}
+
+.exp-date {
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    top: 40px;
+    left: 80%;
+}
+#cvc-num{
+    font-size: 14px;
+    color: #fff;
+    position: relative;
+    top: 87px;
+    left: 80%;
+}
+#btn{
+    width: 348px;
+    height: 45px;
+    border-radius: 9px;
+    margin-left: 5px;
+    border: none;
+    background-color: hsl(278, 68%, 11%);
+    color: white;
+    font-family: "SpaceGrotesk";
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+}
+.border-color{
+    border: 1px solid #ff0000;
+}
+#error1{ color: red;
+    font-size: 13px;
+}
+#error2{
+ color: red;
+font-size: 13px;
+text-transform: none;
+}
+#error3{
+    margin-left: 7px;
+ color: red;
+font-size: 13px;
+text-transform: none;
+}
+.errormsg{
+    display: none;
+}
+
+.completion{
+    /* text-align: center; */
+    width: fit-content;
+    /* height: 350px; */
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+.completion-icon{
+    align-self: center;
+}
+.completion-icon img{
+    height: 65px;
+}
+#complete{
+    position: absolute;
+    top: 30%;
+    left: 55%;
+}
+
+.congrats-txt{
+    align-self: center;
+    /* text-align: center; */
+}
+ h1{
+margin: 20px 0px 10px 50px;
+}
+.compliment{
+    margin: 10px 0px 30px 0px;
+}
+
+.btn{
+    width: 348px;
+    height: 45px;
+    border-radius: 9px;
+    margin-left: 5px;
+    border: none;
+    background-color: hsl(278, 68%, 11%);
+    color: white;
+    font-family: "SpaceGrotesk";
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.complete-info{
+        float: left;
+        clear: both;
+}
+.attribution{
+    position: absolute;
+    top: 95%;
+    left: 55%;
+}
